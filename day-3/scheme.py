@@ -16,7 +16,7 @@ def seval(sexp, env):
     if isinstance(sexp, (int, float)):
         return sexp
     elif isinstance(sexp, str):  #Symbols
-        return env[sexp]  #Evaluatte symobl names in the 'env'
+        return env[sexp]  #Evaluate symbol names in the 'env'
     elif isinstance(sexp, tuple):
         # Special forms
         if sexp[0] == 'define':
