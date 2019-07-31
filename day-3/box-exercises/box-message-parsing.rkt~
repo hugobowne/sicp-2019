@@ -1,0 +1,12 @@
+#lang racket
+
+; Box with message passing
+(define (make-bob-box x y width height)
+  (define (dispatch message)
+    (cond ((equal? message 'width) width)
+          ((equal? message 'height) height)
+          ((equal? message 'type) 'bob-box)
+          )
+    )
+  dispatch
+  )
